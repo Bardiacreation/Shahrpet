@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>شهرپت × بردیا بابایی — نمونه‌ی اختصاصی AI</title>
+<meta name="description" content="نمونه‌ی رایگان محتوای موشن و ویدیوی هوش مصنوعی، اختصاصی برای برند شهرپت.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Vazirmatn:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16151B; --ink-soft:#5C5A66; --paper:#FFFDF7; --card:#FFFFFF;
+    --yellow:#FFC22E; --coral:#FF5A5F; --teal:#11B5A4; --cyan:#23B4E6;
+    --display:'Lalezar',Tahoma,sans-serif; --body:'Vazirmatn',Tahoma,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.8;
+    overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:min(1120px,92vw);margin-inline:auto}
+  .rail{height:7px;width:120px;border-radius:99px;display:flex;overflow:hidden}
+  .rail i{flex:1}
+  .rail i:nth-child(1){background:var(--yellow)} .rail i:nth-child(2){background:var(--coral)}
+  .rail i:nth-child(3){background:var(--teal)} .rail i:nth-child(4){background:var(--cyan)}
+  .eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:.82rem;
+    letter-spacing:.02em;padding:.4rem .9rem;border-radius:99px;background:#fff;
+    border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink)}
+  .chip{display:inline-flex;align-items:center;gap:.4rem;font-weight:700;font-size:.78rem;
+    padding:.35rem .8rem;border-radius:99px;color:#fff;background:var(--ink)}
+
+  /* top bar */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,253,247,.86);
+    backdrop-filter:blur(10px);border-bottom:2px solid var(--ink)}
+  .bar{display:flex;align-items:center;justify-content:space-between;padding:.7rem 0}
+  .brand{display:flex;align-items:center;gap:.6rem}
+  .brand img{height:34px;width:auto;image-rendering:auto;border-radius:6px}
+  .brand .nm{font-family:var(--display);font-size:1.5rem;line-height:1;letter-spacing:.01em}
+  .bar .who{font-size:.8rem;color:var(--ink-soft);font-weight:500}
+  .bar .who b{color:var(--ink)}
+
+  /* hero */
+  .hero{padding:clamp(2.4rem,6vw,4.6rem) 0 2.2rem;text-align:center}
+  .hero .eyebrow{margin-bottom:1.2rem}
+  .hero h1{font-family:var(--display);font-weight:400;
+    font-size:clamp(2.6rem,8vw,5.4rem);line-height:1.04;letter-spacing:.005em}
+  .hero h1 .y{color:var(--coral)} .hero h1 .t{color:var(--teal)}
+  .hero p.sub{max-width:46ch;margin:1.1rem auto 0;color:var(--ink-soft);
+    font-size:clamp(1rem,2.4vw,1.18rem)}
+  .hero .cta{display:flex;gap:.7rem;flex-wrap:wrap;justify-content:center;margin-top:1.7rem}
+  .btn{font-family:var(--body);font-weight:700;font-size:1rem;padding:.85rem 1.5rem;
+    border-radius:99px;border:2px solid var(--ink);cursor:pointer;transition:transform .15s ease,box-shadow .15s ease;
+    box-shadow:4px 4px 0 var(--ink)}
+  .btn:hover,.btn:focus-visible{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink);outline:none}
+  .btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+  .btn.primary{background:var(--coral);color:#fff}
+  .btn.ghost{background:#fff;color:var(--ink)}
+  .btn.wa{background:var(--teal);color:#fff} .btn.ig{background:var(--yellow);color:var(--ink)}
+
+  /* hero video stage */
+  .stage{position:relative;margin-top:2.4rem}
+  .stage .pop{position:absolute;inset:0;border-radius:26px;z-index:-1}
+  .stage .pop.a{background:var(--yellow);transform:rotate(-1.4deg) translate(10px,12px)}
+  .stage .pop.b{background:var(--cyan);transform:rotate(1.2deg) translate(-12px,14px)}
+  .frame{border:3px solid var(--ink);border-radius:24px;overflow:hidden;background:#000;
+    box-shadow:0 18px 40px rgba(22,21,27,.18)}
+  .frame video{display:block;width:100%;height:auto}
+  .sound-hint{margin-top:.8rem;font-size:.82rem;color:var(--ink-soft)}
+
+  /* generic section */
+  section.blk{padding:clamp(2.6rem,6vw,4.4rem) 0}
+  .head{display:flex;flex-direction:column;gap:.8rem;margin-bottom:1.8rem}
+  .head h2{font-family:var(--display);font-weight:400;font-size:clamp(1.9rem,5vw,3rem);line-height:1.1}
+  .head p{color:var(--ink-soft);max-width:54ch}
+
+  /* intro */
+  .intro{background:var(--ink);color:#fff}
+  .intro .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:2rem;align-items:center}
+  .intro h2{font-family:var(--display);font-size:clamp(1.7rem,4.5vw,2.6rem);line-height:1.2}
+  .intro h2 .c{color:var(--yellow)}
+  .intro p{color:#D9D7E0;margin-top:.7rem}
+  .ai-badge{border:2px dashed var(--cyan);border-radius:18px;padding:1.2rem 1.3rem;background:#1E1C26}
+  .ai-badge .t{font-family:var(--display);font-size:1.4rem;color:var(--cyan)}
+  .ai-badge p{color:#CFCDD8;font-size:.92rem;margin-top:.3rem}
+
+  /* reels wall */
+  .reels{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem}
+  .reel{position:relative}
+  .reel .v{border:3px solid var(--ink);border-radius:20px;overflow:hidden;background:#000;
+    box-shadow:5px 6px 0 var(--ink);transition:transform .18s ease,box-shadow .18s ease}
+  .reel:hover .v,.reel:focus-within .v{transform:translateY(-6px);box-shadow:5px 12px 0 var(--ink)}
+  .reel video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover}
+  .reel .tag{position:absolute;top:.7rem;inset-inline-start:.7rem;z-index:2;
+    font-weight:700;font-size:.78rem;color:#fff;padding:.25rem .7rem;border-radius:99px;border:2px solid #fff}
+  .reel:nth-child(1) .tag{background:var(--coral)} .reel:nth-child(2) .tag{background:var(--teal)}
+  .reel:nth-child(3) .tag{background:var(--cyan)} .reel:nth-child(4) .tag{background:var(--yellow);color:var(--ink);border-color:var(--ink)}
+
+  /* feature */
+  .feature{background:linear-gradient(180deg,#fff, #FFF7E8)}
+  .feature .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:2.2rem;align-items:center}
+  .feature h2{font-family:var(--display);font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.15}
+  .feature h2 .c{color:var(--coral)}
+  .feature p{color:var(--ink-soft);margin-top:.6rem}
+
+  /* value */
+  .vlist{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem;margin-top:.5rem}
+  .vitem{display:flex;gap:.7rem;align-items:flex-start;background:#fff;border:2px solid var(--ink);
+    border-radius:16px;padding:.9rem 1rem;box-shadow:3px 3px 0 var(--ink)}
+  .vitem .dot{flex:0 0 auto;width:14px;height:14px;border-radius:99px;margin-top:.5rem}
+  .vitem:nth-child(1) .dot{background:var(--coral)} .vitem:nth-child(2) .dot{background:var(--teal)}
+  .vitem:nth-child(3) .dot{background:var(--cyan)} .vitem:nth-child(4) .dot{background:var(--yellow)}
+  .vitem:nth-child(5) .dot{background:var(--coral)} .vitem:nth-child(6) .dot{background:var(--teal)}
+  .vitem b{display:block} .vitem span{font-size:.88rem;color:var(--ink-soft)}
+
+  /* cta band */
+  .ctaband{background:var(--coral);color:#fff;text-align:center}
+  .ctaband h2{font-family:var(--display);font-size:clamp(2rem,5.5vw,3.4rem);line-height:1.1}
+  .ctaband p{max-width:50ch;margin:.8rem auto 0;color:#FFF0F0}
+  .ctaband .cta{justify-content:center;margin-top:1.6rem;display:flex;gap:.7rem;flex-wrap:wrap}
+  .ctaband .btn{border-color:#fff;box-shadow:4px 4px 0 rgba(0,0,0,.35)}
+  .ctaband .btn:hover{box-shadow:6px 6px 0 rgba(0,0,0,.35)}
+  .ctaband .btn.solid{background:#fff;color:var(--coral)}
+  .ctaband .btn.line{background:transparent;color:#fff}
+
+  /* footer */
+  footer{background:var(--ink);color:#CFCDD8;padding:2.4rem 0}
+  footer .wrap{display:flex;flex-direction:column;gap:1rem;align-items:center;text-align:center}
+  footer .nm{font-family:var(--display);color:#fff;font-size:1.6rem}
+  footer .links{display:flex;gap:1.2rem;flex-wrap:wrap;justify-content:center;font-weight:500}
+  footer .links a:hover{color:var(--yellow)}
+  footer small{color:#83818E}
+
+  @media(max-width:820px){
+    .intro .wrap,.feature .wrap{grid-template-columns:1fr}
+    .reels{grid-template-columns:repeat(2,1fr)}
+    .vlist{grid-template-columns:1fr}
+    .bar .who{display:none}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{transition:none!important;scroll-behavior:auto!important}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <div class="brand">
+      <img src="data:image/png;base64,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" alt="لوگوی شهرپت">
+      <span class="nm">شهرپت</span>
+    </div>
+    <div class="who">نمونه‌ی اختصاصی از <b>بردیا بابایی</b> · AI Artist</div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">🎬 نمونه‌ی رایگان، اختصاصی برای شهرپت</span>
+      <h1>شهرپت،<br>حالا <span class="y">در حرکت</span> 🐾</h1>
+      <p class="sub">یه ست کامل ویدیوی موشن — گربه، سگ، آکواریوم، محصول و ارسال — که کاملاً با هوش مصنوعی و مخصوص برند شما ساختم.</p>
+      <div class="cta">
+        <a class="btn primary" href="#start">بیایید شروع کنیم</a>
+        <a class="btn ghost" href="#reels">دیدن ریلز‌ها</a>
+      </div>
+      <div class="stage">
+        <span class="pop a"></span><span class="pop b"></span>
+        <div class="frame">
+          <video src="assets/v-storyboard.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        </div>
+        <div class="sound-hint">🔊 برای شنیدن صدا، روی هر ویدیو بزن</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO + AI -->
+  <section class="blk intro">
+    <div class="wrap">
+      <div>
+        <h2>من <span class="c">بردیا بابایی</span>‌ام — و این رو مخصوص شما ساختم.</h2>
+        <p>بیشتر از ۴ ساله که با ابزارهای هوش مصنوعی موشن‌دیزاین و محتوای برند تولید می‌کنم. این صفحه یه نمونه‌ی رایگانه؛ هیچ تعهدی نداره — فقط می‌خواستم نشون بدم فید اینستاگرام شهرپت با محتوای حرفه‌ای چه شکلی می‌شه.</p>
+      </div>
+      <div class="ai-badge">
+        <div class="t">۱۰۰٪ هوش مصنوعی</div>
+        <p>تمام تصاویر و ویدیوهای این صفحه با AI تولید شده‌اند — بدون فیلم‌برداری، بدون استودیو. سریع، مقرون‌به‌صرفه و بی‌نهایت قابل تکرار.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REELS WALL -->
+  <section class="blk" id="reels">
+    <div class="wrap">
+      <div class="head">
+        <div class="rail"><i></i><i></i><i></i><i></i></div>
+        <h2>ریلز‌های آماده‌ی فید شما</h2>
+        <p>چهار ریلز عمودی ۹:۱۶، آماده برای استوری و اکسپلور. هر کدوم با قفل لوگوی شهرپت در انتها.</p>
+      </div>
+      <div class="reels">
+        <div class="reel"><span class="tag">محصول</span><div class="v"><video src="assets/v-product.mp4" autoplay muted loop playsinline preload="none"></video></div></div>
+        <div class="reel"><span class="tag">گربه‌ها</span><div class="v"><video src="assets/v-cat.mp4" autoplay muted loop playsinline preload="none"></video></div></div>
+        <div class="reel"><span class="tag">آبزیان</span><div class="v"><video src="assets/v-aqua.mp4" autoplay muted loop playsinline preload="none"></video></div></div>
+        <div class="reel"><span class="tag">سگ‌ها</span><div class="v"><video src="assets/v-dog.mp4" autoplay muted loop playsinline preload="none"></video></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE -->
+  <section class="blk feature">
+    <div class="wrap">
+      <div>
+        <span class="chip">شات سینمایی</span>
+        <h2 style="margin-top:.8rem">از <span class="c">دانه</span> تا درِ خونه‌ی مشتری</h2>
+        <p>یه تیزر افقی برای سایت و یوتیوب و تبلیغات: جعبه‌ی ارسال شهرپت روی اسکای‌لاین تهران. همون کیفیت سینمایی، این بار در قاب ۱۶:۹.</p>
+      </div>
+      <div class="frame">
+        <video src="assets/v-hero.mp4" autoplay muted loop playsinline preload="none"></video>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE -->
+  <section class="blk">
+    <div class="wrap">
+      <div class="head">
+        <div class="rail"><i></i><i></i><i></i><i></i></div>
+        <h2>چی می‌تونم برای شهرپت بسازم؟</h2>
+        <p>از صفر تا صد محتوای دیجیتال برند شما — یکپارچه، منظم و با همین کیفیت.</p>
+      </div>
+      <div class="vlist">
+        <div class="vitem"><span class="dot"></span><div><b>ریلز و استوری هفتگی</b><span>محتوای منظم برای زنده‌نگه‌داشتن فید</span></div></div>
+        <div class="vitem"><span class="dot"></span><div><b>تیزر محصول</b><span>معرفی برندها و کالاهای جدید</span></div></div>
+        <div class="vitem"><span class="dot"></span><div><b>موشن لوگو و کاور هایلایت</b><span>هویت بصری منسجم</span></div></div>
+        <div class="vitem"><span class="dot"></span><div><b>کمپین فصلی و مناسبتی</b><span>یلدا، نوروز، حراج‌ها</span></div></div>
+        <div class="vitem"><span class="dot"></span><div><b>عکس محصول AI</b><span>بدون استودیو و فیلم‌بردار</span></div></div>
+        <div class="vitem"><span class="dot"></span><div><b>استراتژی محتوا</b><span>تقویم و پلن انتشار</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="blk ctaband" id="start">
+    <div class="wrap">
+      <h2>بیایید شروع کنیم 🚀</h2>
+      <p>اگه دوستش داشتی، یه پیام بده — درباره‌ی یه پلن محتوای ماهانه برای شهرپت حرف بزنیم.</p>
+      <div class="cta">
+        <a class="btn solid" href="mailto:bardiaacreation@gmail.com?subject=همکاری%20محتوا%20با%20شهرپت">ایمیل بزن</a>
+        <a class="btn line" href="https://wa.me/989334102423" target="_blank" rel="noopener">واتساپ</a>
+        <a class="btn line" href="https://instagram.com/bardiaababaeii" target="_blank" rel="noopener">اینستاگرام</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="nm">بردیا بابایی</div>
+    <div>هنرمند هوش مصنوعی · موشن‌دیزاین و تولید محتوای برند</div>
+    <div class="links">
+      <a href="mailto:bardiaacreation@gmail.com">bardiaacreation@gmail.com</a>
+      <a href="https://wa.me/989334102423" target="_blank" rel="noopener">واتساپ ۰۹۳۳۴۱۰۲۴۲۳</a>
+      <a href="https://instagram.com/bardiaababaeii" target="_blank" rel="noopener">@bardiaababaeii</a>
+    </div>
+    <small>تمام دارایی‌های این صفحه با هوش مصنوعی ساخته شده‌اند · تهیه‌شده با Claude (Anthropic)</small>
+  </div>
+</footer>
+
+<script>
+  // tap any video to toggle its sound (solo audio)
+  var vids = Array.prototype.slice.call(document.querySelectorAll('video'));
+  vids.forEach(function(v){
+    v.addEventListener('click', function(){
+      if(v.muted){
+        vids.forEach(function(o){ if(o!==v){ o.muted = true; } });
+        v.muted = false; v.play();
+      } else { v.muted = true; }
+    });
+    v.style.cursor = 'pointer';
+  });
+</script>
+</body>
+</html>
